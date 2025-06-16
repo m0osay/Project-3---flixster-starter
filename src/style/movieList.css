@@ -1,0 +1,5 @@
+.movie-list{
+     /* background-image: url("../assets/img/background-img-night.png"); */
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}

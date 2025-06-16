@@ -1,0 +1,16 @@
+
+header{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 120px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #37c9ff;                        /* neon logo */
+  text-shadow: 0 0 12px #37c9ff;
+}
+

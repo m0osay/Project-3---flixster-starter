@@ -1,0 +1,12 @@
+/* movieModal.css   (note the dot) */
+.movie-modal {
+  background: rgb(154, 231, 205);
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: fixed;
+  inset: 0;
+  margin: auto;          /* center in viewport */
+  max-width: 480px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  z-index: 1000;
+}
