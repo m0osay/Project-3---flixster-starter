@@ -38,7 +38,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
     - [X] Submit/Search button
     - [X] Clear button
   - [X] Movies with a title containing the search query in the text input field are displayed in a grid view when the user either:
-    - [ ] Presses the Enter key
+    - [X] Presses the Enter key
     - [X] Clicks the Submit/Search button
   - [X] Users can click the Clear button. When clicked:
     - [X] All text in the text input field is deleted
@@ -49,29 +49,29 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
     - [ ] [Color contrast](https://webaim.org/resources/contrastchecker/)
     - [ ] Alt text for images 
   - [ ] Website implements responsive web design.
-    - [ ] Uses CSS Flexbox or CSS Grid
+    - [X] Uses CSS Flexbox or CSS Grid
     - [ ] Movie tiles and images shrink/grow in response to window size
   - [ ] Users can click on a movie tile to view more details about a movie in a pop-up modal.
-    - [ ] The pop-up window is centered in the screen and does not occupy the entire screen.
-    - [ ] The pop-up window has a shadow to show that it is a pop-up and appears floating on the screen.
+    - [x] The pop-up window is centered in the screen and does not occupy the entire screen.
+    - [?] The pop-up window has a shadow to show that it is a pop-up and appears floating on the screen.
     - [ ] The backdrop of the pop-up appears darker or in a different shade than before. including:
     - [ ] The pop-up displays additional details about the moving including:
       - [ ] Runtime in minutes
-      - [ ] Backdrop poster
-      - [ ] Release date
+      - [X] Backdrop poster
+      - [X] Release date
       - [ ] Genres
-      - [ ] An overview
-  - [ ] Users can use a drop-down menu to sort movies.
-    - [ ] Drop-down allows movies to be sorted by:
-      - [ ] Title (alphabetic, A-Z)
-      - [ ] Release date (chronologically, most recent to oldest)
-      - [ ] Vote average (descending, highest to lowest)
-    - [ ] When a sort option is clicked, movies display in a grid according to selected criterion.
+      - [X] An overview
+  - [X] Users can use a drop-down menu to sort movies.
+    - [X] Drop-down allows movies to be sorted by:
+      - [X] Title (alphabetic, A-Z)
+      - [X] Release date (chronologically, most recent to oldest)
+      - [X] Vote average (descending, highest to lowest)
+    - [X] When a sort option is clicked, movies display in a grid according to selected criterion.
   - [ ] Website displays:
     - [ ] Header section
     - [ ] Banner section
-    - [ ] Search bar
-    - [ ] Movie grid
+    - [X] Search barx
+    - [X] Movie grid
     - [ ] Footer section
     - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it. 
 
@@ -83,33 +83,33 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [ ] **Embedded Movie Trailers**
   - [ ] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
     - [ ] When the trailer is clicked, users can play the movie trailer.
-- [ ] **Favorite Button**
-  - [ ] For each movie displayed, users can favorite the movie.
-  - [ ] There should be visual element (such as a heart icon) on each movie's tile to show whether or not the movie has been favorited.
-  - [ ] If the movie is not favorited:
-    - [ ] Clicking on the visual element should mark the movie as favorited
-    - [ ] There should be visual feedback (such as the heart turning a different color) to show that the movie has been favorited by the user.
+- [X] **Favorite Button**
+  - [X] For each movie displayed, users can favorite the movie.
+  - [X] There should be visual element (such as a heart icon) on each movie's tile to show whether or not the movie has been favorited.
+  - [X] If the movie is not favorited:
+    - [X] Clicking on the visual element should mark the movie as favorited
+    - [X] There should be visual feedback (such as the heart turning a different color) to show that the movie has been favorited by the user.
   - [ ] If the movie is already favorited:
-    - [ ] Clicking on the visual element should mark the movie as *not* favorited.
-    - [ ] There should be visual feedback (such as the heart turning a different color) to show that the movie has been unfavorited. 
-- [ ] **Watched Checkbox**
-  - [ ] For each movie displayed, users can mark the movie as watched.
-  - [ ] There should be visual element (such as an eye icon) on each movie's tile to show whether or not the movie has been watched.
-  - [ ] If the movie has not been watched:
-    - [ ] Clicking on the visual element should mark the movie as watched
-    - [ ] There should be visual feedback (such as the eye turning a different color) to show that the movie has been watched by the user.
-  - [ ] If the movie is already watched:
-    - [ ] Clicking on the visual element should mark the movie as *not* watched.
-    - [ ] There should be visual feedback (such as the eye turning a different color) to show that the movie has not been watched.
+    - [X] Clicking on the visual element should mark the movie as *not* favorited.
+    - [X] There should be visual feedback (such as the heart turning a different color) to show that the movie has been unfavorited. 
+- [X] **Watched Checkbox**
+  - [X] For each movie displayed, users can mark the movie as watched.
+  - [X] There should be visual element (such as an eye icon) on each movie's tile to show whether or not the movie has been watched.
+  - [X] If the movie has not been watched:
+    - [X] Clicking on the visual element should mark the movie as watched
+    - [X] There should be visual feedback (such as the eye turning a different color) to show that the movie has been watched by the user.
+  - [X] If the movie is already watched:
+    - [X] Clicking on the visual element should mark the movie as *not* watched.
+    - [X] There should be visual feedback (such as the eye turning a different color) to show that the movie has not been watched.
 - [ ] **Sidebar**
-  - [ ] The website includes a side navigation bar.
-  - [ ] The sidebar has three pages:
-    - [ ] Home
-    - [ ] Favorites
-    - [ ] Watched
-  - [ ] The Home page displays all current movies in a grid view, the search bar, and the sort movies drop-down.
-  - [ ] The Favorites page displays all favorited movies in a grid view.
-  - [ ] The Watched page displays all watched movies in a grid view.
+  - [X] The website includes a side navigation bar.
+  - [X] The sidebar has three pages:
+    - [X] Home
+    - [X] Favorites
+    - [X] Watched
+  - [X] The Home page displays all current movies in a grid view, the search bar, and the sort movies drop-down.
+  - [X] The Favorites page displays all favorited movies in a grid view.
+  - [X] The Watched page displays all watched movies in a grid view.
 
 ### Walkthrough Video
 

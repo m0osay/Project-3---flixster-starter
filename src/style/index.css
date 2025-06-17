@@ -1,9 +1,10 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  width: auto;
+  
   background-image: url("../src/assets/img/background-img-night.png");
 }
-
 button {
   background-color: #282c34;
   color: white;
@@ -12,7 +13,11 @@ button {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-
+#root{
+  display: flex;
+  flex-direction: row;
+  justify-content:row;
+}
 button:hover {
   background-color: #777;
   color: white;
@@ -25,5 +30,5 @@ button:hover {
 }
 
 .searchButton{
-  
+
 }

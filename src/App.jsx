@@ -1,73 +1,76 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./style/App.css";
 import Nav from "./Components/Nav";
 import MovieList from "./Components/MovieList";
+import MovieCard from "./Components/MovieCard";
 
 const App = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [clearBool, setClearBool] = useState(false);
-  const [searchBool, setSearchBool] = useState(false)
+  const [favs, setFavs] = useState([]);
+  const [watched, setWatched] = useState([]);
+  const [movies, setMovies] = useState([]);
+  const [activeTab, setActiveTab] = useState("home");
+  const [showFavoritesPanel, setShowFavoritesPanel] = useState(false); //toggles whether the panel is expanded or not by default its false
 
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
-  
+  //the purpose of this function is to add or remove movies from favorite when the user hearts or unhearts it
+  const onToggleHeart = (movie) => {
+    setFavs((prev) => {
+      const exists = prev.some((m) => m.id === movie.id);
+      if (exists) {
+        // remove it
+        return prev.filter((m) => m.id !== movie.id);
+      } else {
+        // add it
+        return [...prev, movie];
+      }
+    });
+  };
+  //the purpose of this function is to add or remove movies from watched when the user hearts or unhearts it
+  const onToggleWatch = (movie) => {
+    setWatched((prev) => {
+      const exists = prev.some((m) => m.id === movie.id);
+      if (exists) {
+        return prev.filter((m) => m.id !== movie.id);
+      } else {
+        return [...prev, movie];
+      }
+    });
+    console.log(watched);
   };
 
-  const handleKeyDown = (e) => {
-     if (e.key === 'Enter'){
-      setSearchBool(true)
-    }
-
-  }
-  const handleClearButton = (event) => {
-    console.log("Clicked on Clear Butotn, and state " + clearBool)
-    setSearchBool(false)
-    setClearBool(true);
-    setSearchQuery("")
-
+  //this toggles our favoiret pannel from the Nav function
+  const handlePageState = (state) => {
+    console.log("page state", state);
+    setActiveTab(state);
   };
-
-
-  const handleSearchButton = (event) => {         
-  setSearchBool(true);              
-};
- 
 
   return (
     <>
-      <Nav />
-      <div className=" search-container">
-        <input
-        type="text"
-        value={searchQuery}
-        onChange={handleSearchChange} //updates every key stroke the user inputs
-        onKeyDown={handleKeyDown} //this will check if the user pressed enter
-        placeholder="Search"
-      />
-          <button id = "searchButton" onClick={handleSearchButton}> Search</button>
-          
-          <button id = "clearButton" onClick = {handleClearButton}> Clear</button>
-
-          <select className=" search-input">
-          <option value="Popularity"> Popularity </option>
-          <option value="Release-date"> Release Date </option>
-          <option value="Rating"> Rating </option>
-        </select>
+      <div className="side-bar">
+        <Nav
+          activeTab={activeTab}
+          favoriteCount={favs.length}
+          watchedCount={watched.length}
+          // showFavoritePanel={showFavoritesPanel}
+          // setShowFavoritePanel={setShowFavoritesPanel}
+          togglePageState={handlePageState}
+          favorites={favs}
+          watchedMovies={watched}
+          setMovies={setMovies}
+           movies={movies}
+        />
       </div>
 
-  
-
-      <body>
-        {/* pass props as an object with the three reference */}
-    
+      <div className="main-side">
         <MovieList
-          searchQuery={searchQuery}
-          searchBool={searchBool}
-          clearBool={clearBool}
-          setSearchBool={ setSearchBool}
-          setClearBool = {setClearBool}
+          setMovies={setMovies}
+          movies={movies}
+          favSet={favs}
+          watchedSet={watched}
+          onToggleHeart={onToggleHeart}
+          onToggleWatch={onToggleWatch}
+          activeTab={activeTab}
         />
-      </body>
+      </div>
     </>
   );
 };

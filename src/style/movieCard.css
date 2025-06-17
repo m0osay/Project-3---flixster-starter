@@ -34,7 +34,21 @@
   font-size: 0.85rem;
   line-height: 1.2;
 }
+.movie-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    gap: 100px;
+    height: auto;
+    width: 15%;
 
+}
+
+.icon heart{
+    background-image: url("../assets/img/icons/heart-filled.png");
+
+}
 
 .movie-card:hover,
 .movie-card:focus-visible {
