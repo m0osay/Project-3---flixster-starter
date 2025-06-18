@@ -99,5 +99,9 @@ summary {
 .search-container select{
   width: 15%;
 }
+
+.f{
+  height: 100px;
+}
 }
 

@@ -1,3 +1,5 @@
+
+
 /* Sidebar container */
 .sidebar {
   width: 440px;
@@ -11,6 +13,7 @@
   box-sizing: border-box;
   flex-shrink: 0;
 }
+
 
 /* Logo / Title */
 .sidebar-logo {

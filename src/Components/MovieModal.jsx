@@ -5,54 +5,78 @@ import axios from "axios";
 function MovieModal({ movie, onClose }) {
   const apiKey = import.meta.env.VITE_API_KEY;
 
+  const [runtime, setRuntime] = useState(null);
   const [genreMap, setGenreMap] = useState(null);
   const [trailerKey, setTrailerKey] = useState(null);
 
-  // ① Fetch genres once
+  //  Fetch full details once 
+  useEffect(() => {
+    let cancelled = false;
+    async function loadDetails() {
+      try {
+        const { data } = await axios.get(
+          `https://api.themoviedb.org/3/movie/${movie.id}`,
+          { params: { api_key: apiKey, language: "en-US" } }
+        );
+        if (!cancelled) {
+          setRuntime(data.runtime);      
+        }
+      } catch (err) {
+        console.error("Failed to fetch movie details", err);
+      }
+    }
+    loadDetails();
+    return () => { cancelled = true };
+  }, [apiKey, movie.id]);
+
+  
   useEffect(() => {
     let cancelled = false;
     async function loadGenres() {
-      const { data } = await axios.get(
-        "https://api.themoviedb.org/3/genre/movie/list",
-        { params: { api_key: apiKey } }
-      );
-      if (!cancelled) {
-        const lookup = {};
-        data.genres.forEach(g => (lookup[g.id] = g.name));
-        setGenreMap(lookup);
+      try {
+        const { data } = await axios.get(
+          "https://api.themoviedb.org/3/genre/movie/list",
+          { params: { api_key: apiKey } }
+        );
+        if (!cancelled) {
+          const lookup = {};
+          data.genres.forEach(g => (lookup[g.id] = g.name));
+          setGenreMap(lookup);
+        }
+      } catch (err) {
+        console.error("Failed to fetch genres", err);
       }
     }
     loadGenres();
     return () => { cancelled = true };
   }, [apiKey]);
 
-  // ② Fetch videos once, pick the YouTube trailer
+  // Fetch videos once, pick the YouTube trailer
   useEffect(() => {
     let cancelled = false;
     async function loadTrailer() {
-      const { data } = await axios.get(
-        `https://api.themoviedb.org/3/movie/${movie.id}/videos`,
-        { params: { api_key: apiKey, language: "en-US" } }
-      );
-      if (cancelled) return;
-
-      // find the “official trailer” on YouTube
-      const trailer = data.results.find(
-        v => v.type === "Trailer" && v.site === "YouTube"
-      );
-      if (trailer) setTrailerKey(trailer.key);
+      try {
+        const { data } = await axios.get(
+          `https://api.themoviedb.org/3/movie/${movie.id}/videos`,
+          { params: { api_key: apiKey, language: "en-US" } }
+        );
+        if (cancelled) return;
+        const trailer = data.results.find(
+          v => v.type === "Trailer" && v.site === "YouTube"
+        );
+        if (trailer) setTrailerKey(trailer.key);
+      } catch (err) {
+        console.error("Failed to fetch videos", err);
+      }
     }
     loadTrailer();
     return () => { cancelled = true };
   }, [apiKey, movie.id]);
 
-  // derive genre names
-  const genreNames = genreMap
-    ? movie.genre_ids
-        .map(id => genreMap[id])
-        .filter(Boolean)
-        .join(", ")
-    : "Loading genres…";
+  // derive genre names from your map + movie.genre_ids
+  const genreNames = genreMap && movie.genre_ids
+    ? movie.genre_ids.map(id => genreMap[id]).filter(Boolean).join(", ")
+    : "Loading…";
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -67,13 +91,17 @@ function MovieModal({ movie, onClose }) {
           <div className="modal-details">
             <h1 className="modal-title">{movie.title}</h1>
             <p className="modal-rating">⭐ {movie.vote_average}</p>
-            <p className="modal-release">
-              Release Date: {movie.release_date}
-            </p>
-            <h2> Overview:</h2>
+            {runtime != null && (
+              <p className="modal-runtime">⏱ Runtime: {runtime} min</p>
+            )}
+            <p className="modal-release">Release Date: {movie.release_date}</p>
+
+            <h2>Overview:</h2>
             <p className="modal-overview">{movie.overview}</p>
+
             <h3>Genres: {genreNames}</h3>
-            <h3> Trailer:</h3>
+
+            <h3>Trailer:</h3>
             {trailerKey ? (
               <iframe
                 title="Trailer"

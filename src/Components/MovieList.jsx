@@ -286,7 +286,7 @@ function MovieList({
         <MovieModal movie={selectedMovie} onClose={() => setShowModal(false) } />
       )}
       {activeTab == "home" && (
-        <button className="nav-item" onClick={handleLoadMore}>
+        <button className="load-more" onClick={handleLoadMore}>
           LoadMore
         </button>
 

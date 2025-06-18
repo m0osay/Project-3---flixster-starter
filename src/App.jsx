@@ -72,6 +72,11 @@ const App = () => {
           activeTab={activeTab}
         />
       </div>
+
+      <footer className = "f"r>
+        <h2> hi</h2>
+
+      </footer>
  
     </>
   );
