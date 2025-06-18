@@ -45,6 +45,7 @@ const App = () => {
 
   return (
     <>
+
       <div className="side-bar">
         <Nav
           activeTab={activeTab}
@@ -71,6 +72,7 @@ const App = () => {
           activeTab={activeTab}
         />
       </div>
+ 
     </>
   );
 };
