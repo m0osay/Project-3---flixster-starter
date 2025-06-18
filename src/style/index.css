@@ -3,7 +3,7 @@ html {
   font-family: Arial, sans-serif;
   width: auto;
   
-  background-image: url("../src/assets/img/background-img-night.png");
+  background-image: url("../assets/img/background-img-night.png");
 }
 button {
   background-color: #282c34;
