@@ -13,11 +13,11 @@ Currently, two official plugins are available:
 
 ## Unit Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: Moosay Hailewold
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: 12 hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://project-3-flixster-starter-qsbe.onrender.com/)
 
 ### Application Features
 
@@ -31,7 +31,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
     - [X] Poster image
     - [X] Vote average
   - [X] Users can load more current movies by clicking a button which adds more movies to the grid without reloading the entire page. 
-- [ ] **Search Functionality**
+- [X] **Search Functionality**
   - [X] Users can use a search bar to search for movies by title.
   - [ ] The search bar should include:
     - [X] Text input field
@@ -51,7 +51,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
   - [ ] Website implements responsive web design.
     - [X] Uses CSS Flexbox or CSS Grid
     - [X] Movie tiles and images shrink/grow in response to window size
-  - [ ] Users can click on a movie tile to view more details about a movie in a pop-up modal.
+  - [X] Users can click on a movie tile to view more details about a movie in a pop-up modal.
     - [x] The pop-up window is centered in the screen and does not occupy the entire screen.
     - [X] The pop-up window has a shadow to show that it is a pop-up and appears floating on the screen.
     - [X] The backdrop of the pop-up appears darker or in a different shade than before. including:
@@ -67,20 +67,20 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
       - [X] Release date (chronologically, most recent to oldest)
       - [X] Vote average (descending, highest to lowest)
     - [X] When a sort option is clicked, movies display in a grid according to selected criterion.
-  - [ ] Website displays:
+  - [X] Website displays:
     - [X] Header section
     - [X] Banner section
     - [X] Search barx
     - [X] Movie grid
-    - [ ] Footer section
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it. 
+    - [X] Footer section
+    - [X] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it. 
 
 #### STRETCH FEATURES
 
-- [ ] **Deployment**
+- [X] **Deployment**
   - [X] Website is deployed via Render.
   - [X] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
-- [ ] **Embedded Movie Trailers**
+- [X] **Embedded Movie Trailers**
   - [X] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
     - [X] When the trailer is clicked, users can play the movie trailer.
 - [X] **Favorite Button**
@@ -89,7 +89,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
   - [X] If the movie is not favorited:
     - [X] Clicking on the visual element should mark the movie as favorited
     - [X] There should be visual feedback (such as the heart turning a different color) to show that the movie has been favorited by the user.
-  - [ ] If the movie is already favorited:
+  - [X] If the movie is already favorited:
     - [X] Clicking on the visual element should mark the movie as *not* favorited.
     - [X] There should be visual feedback (such as the heart turning a different color) to show that the movie has been unfavorited. 
 - [X] **Watched Checkbox**
@@ -101,7 +101,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
   - [X] If the movie is already watched:
     - [X] Clicking on the visual element should mark the movie as *not* watched.
     - [X] There should be visual feedback (such as the eye turning a different color) to show that the movie has not been watched.
-- [ ] **Sidebar**
+- [X] **Sidebar**
   - [X] The website includes a side navigation bar.
   - [X] The sidebar has three pages:
     - [X] Home
@@ -114,22 +114,20 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 ### Walkthrough Video
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+<div style="position: relative; padding-bottom: 58.25242718446603%; height: 0;"><iframe src="https://www.loom.com/embed/704af968e6654511a84d093df2fc2e68?sid=9450dc13-4a82-4b73-90bb-6de91dc2aea5" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Yes it did, I felt unpreared understanding the dom strucutre but the instrucotr did a lovely job helping. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
-Add your response here
+I would have added a better design
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I will come up with a better DOM strucutre
 
 ### Open-source libraries used
 
